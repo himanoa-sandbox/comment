@@ -1,12 +1,9 @@
 .App {
-  text-align: center;
   display: flex;
   background-color: transparent;
 }
 
 .commentList {
-  height: 50%;
-  flex-direction: row-reverse;
 }
 
 .comment-form {
