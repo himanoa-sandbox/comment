@@ -1,13 +1,20 @@
 import React from 'react';
 import './App.css';
-import io from "socket.io-client"
 import CommentView from "./CommentView"
+import Dagger from "./Dagger"
+import { createBrowserHistory } from 'history';
+import { Router, Route, Switch } from 'react-router';
 
 function App() {
   return (
-    <div className="App">
-      <CommentView />
-    </div>
+    <Router history={createBrowserHistory()}>
+      <div className="App">
+        <Switch>
+          <Route exact path="/"><Dagger /></Route>
+          <Route exact path="/comments"><CommentView /></Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
